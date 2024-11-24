@@ -1,6 +1,6 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([[57], {
     83987: function(e, t, n) {
-        Promise.resolve().then(n.bind(n, 24385))
+        Promise.resolve().then(n.bind(n, 14207))
     },
     57958: function(e, t, n) {
         var a = n(76392).Symbol;
@@ -71,10 +71,10 @@
           , s = Math.max
           , o = Math.min;
         e.exports = function(e, t, n) {
-            var l, u, d, p, c, y, m = 0, f = !1, h = !1, x = !0;
+            var l, u, d, p, c, y, m = 0, f = !1, b = !1, h = !0;
             if ("function" != typeof e)
                 throw TypeError("Expected a function");
-            function b(t) {
+            function x(t) {
                 var n = l
                   , a = u;
                 return l = u = void 0,
@@ -84,7 +84,7 @@
             function g(e) {
                 var n = e - y
                   , a = e - m;
-                return void 0 === y || n >= t || n < 0 || h && a >= d
+                return void 0 === y || n >= t || n < 0 || b && a >= d
             }
             function v() {
                 var e, n, a, i = r();
@@ -93,11 +93,11 @@
                 c = setTimeout(v, (e = i - y,
                 n = i - m,
                 a = t - e,
-                h ? o(a, d - n) : a))
+                b ? o(a, d - n) : a))
             }
             function T(e) {
                 return (c = void 0,
-                x && l) ? b(e) : (l = u = void 0,
+                h && l) ? x(e) : (l = u = void 0,
                 p)
             }
             function w() {
@@ -109,19 +109,19 @@
                     if (void 0 === c)
                         return m = e = y,
                         c = setTimeout(v, t),
-                        f ? b(e) : p;
-                    if (h)
+                        f ? x(e) : p;
+                    if (b)
                         return clearTimeout(c),
                         c = setTimeout(v, t),
-                        b(y)
+                        x(y)
                 }
                 return void 0 === c && (c = setTimeout(v, t)),
                 p
             }
             return t = i(t) || 0,
             a(n) && (f = !!n.leading,
-            d = (h = "maxWait"in n) ? s(i(n.maxWait) || 0, t) : d,
-            x = "trailing"in n ? !!n.trailing : x),
+            d = (b = "maxWait"in n) ? s(i(n.maxWait) || 0, t) : d,
+            h = "trailing"in n ? !!n.trailing : h),
             w.cancel = function() {
                 void 0 !== c && clearTimeout(c),
                 m = 0,
@@ -184,12 +184,12 @@
             return n || u.test(e) ? d(e.slice(2), n ? 2 : 8) : o.test(e) ? s : +e
         }
     },
-    24385: function(e, t, n) {
+    14207: function(e, t, n) {
         "use strict";
         n.r(t),
         n.d(t, {
             default: function() {
-                return D
+                return L
             }
         });
         var a = n(40733);
@@ -1074,7 +1074,7 @@
         var y = n(32647)
           , m = n(54191)
           , f = n(90614);
-        let h = async () => {
+        let b = async () => {
             if (!(0,
             m.fp)(y.H3.userAuthToken))
                 throw Error("No authentication token found");
@@ -1082,7 +1082,7 @@
                 success: !0
             }
         }
-          , x = async () => {
+          , h = async () => {
             let e = (0,
             m.fp)(y.H3.userAuthToken);
             if (!e)
@@ -1096,7 +1096,7 @@
             })
         }
         ;
-        var b = n(59577)
+        var x = n(59577)
           , g = n(22809)
           , v = n(24104)
           , T = n(89301);
@@ -1133,35 +1133,9 @@
         }
         var A = n(7030)
           , S = n(72552)
-          , k = n(44247);
-        function _(e) {
-            let {targetDate: t} = e
-              , [n,r] = (0,
-            A.useState)("");
-            return (0,
-            A.useEffect)( () => {
-                let e = () => {
-                    let e = t.getTime() - new Date().getTime();
-                    if (e <= 0) {
-                        r("Expired");
-                        return
-                    }
-                    r("".concat(Math.floor(e / 36e5), "h ").concat(Math.floor(e % 36e5 / 6e4), "m ").concat(Math.floor(e % 6e4 / 1e3), "s"))
-                }
-                ;
-                e();
-                let n = setInterval(e, 1e3);
-                return () => clearInterval(n)
-            }
-            , [t]),
-            (0,
-            a.jsx)("div", {
-                className: "flex items-center justify-center text-center font-bold lg:justify-start lg:text-left",
-                children: n
-            })
-        }
-        var M = n(12915)
-          , E = n(16396);
+          , k = n(44247)
+          , _ = n(12915)
+          , M = n(16396);
         let C = [{
             description: "Follow us on Twitter to stay updated with the latest news and features",
             url: "https://twitter.com/intent/follow?screen_name=posterdotfun",
@@ -1184,22 +1158,22 @@
             social: "telegram",
             step: 3
         }];
-        var O = n(92463)
-          , R = n(15449)
-          , F = n(67661)
-          , P = n(21335)
-          , z = n(35213)
-          , B = n(56199)
-          , U = n(34219)
-          , L = n(40114);
-        function D() {
+        var E = n(92463)
+          , O = n(15449)
+          , R = n(67661)
+          , F = n(21335)
+          , P = n(35213)
+          , z = n(56199)
+          , B = n(34219)
+          , U = n(40114);
+        function L() {
             var e, t;
             let {jwtToken: n} = (0,
-            M._)()
+            _._)()
               , {isLoggedIn: l} = (0,
-            E.a)()
+            M.a)()
               , {address: u} = (0,
-            b.m)()
+            x.m)()
               , {switchChain: d, status: p} = function() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}
                   , {mutation: t} = e
@@ -1238,54 +1212,54 @@
               , y = (0,
             k.x)()
               , f = (0,
-            R.Z)()
+            O.Z)()
               , [v,T] = (0,
             A.useState)("")
               , [j,N] = (0,
             A.useState)(!1)
-              , [D,H] = (0,
+              , [L,H] = (0,
             A.useState)(!1)
-              , [$,G] = (0,
+              , [$,D] = (0,
             A.useState)(!1)
-              , [Y,Z] = (0,
+              , [G,Z] = (0,
             A.useState)(!1)
               , [J,W] = (0,
             A.useState)(!1)
-              , [V,q] = (0,
+              , [Y,V] = (0,
             A.useState)(!1)
-              , {tx: {isTxConfirming: K, isTxSuccess: X, isTxError: Q, txError: ee, txData: et}, write: {isWriteError: en, writeError: ea, isWriting: er, mint721: ei}, simulation: {refetchSimulation: es}} = (0,
-            M.S8)({
+              , {tx: {isTxConfirming: q, isTxSuccess: K, isTxError: X, txError: Q, txData: ee}, write: {isWriteError: et, writeError: en, isWriting: ea, mint721: er}, simulation: {refetchSimulation: ei}} = (0,
+            _.S8)({
                 address: "0x88908e22d1249827Ab4c6bdebBdEcf577FCAA218",
-                chainId: O.A.id,
+                chainId: E.A.id,
                 args: [u, v],
                 abi: r,
                 functionName: "mint"
             });
             console.log({
-                isTxConfirming: K,
-                isWriteError: en,
-                isTxSuccess: X,
-                writeError: ea,
-                isWriting: er,
-                isTxError: Q,
-                txError: ee,
-                txData: et
+                isTxConfirming: q,
+                isWriteError: et,
+                isTxSuccess: K,
+                writeError: en,
+                isWriting: ea,
+                isTxError: X,
+                txError: Q,
+                txData: ee
             });
-            let eo = er || K
-              , {mutateAsync: el} = (0,
+            let es = ea || q
+              , {mutateAsync: eo} = (0,
             g.D)({
                 mutationKey: ["validateTwitter"],
-                mutationFn: h
+                mutationFn: b
             })
-              , {mutateAsync: eu} = (0,
+              , {mutateAsync: el} = (0,
             g.D)({
                 mutationKey: ["validateMeme"],
-                mutationFn: x
+                mutationFn: h
             });
             (0,
             A.useEffect)( () => {
                 n && u && (0,
-                P.o$)(u).then(e => {
+                F.o$)(u).then(e => {
                     console.log("Generated Signature:", null == e ? void 0 : e.signature),
                     T(null == e ? void 0 : e.signature)
                 }
@@ -1298,55 +1272,55 @@
             , [u]),
             (0,
             A.useEffect)( () => {
-                X && (U.A.success("Badge claimed successfully!"),
-                q(!0))
+                K && (B.A.success("Badge claimed successfully!"),
+                V(!0))
             }
-            , [X]),
+            , [K]),
             (0,
             A.useEffect)( () => {
-                if (en || Q) {
+                if (et || X) {
                     var e;
-                    let t = ea || ee;
-                    U.A.error((null == t ? void 0 : null === (e = t.message) || void 0 === e ? void 0 : e.split("\n")[0]) || "An error occurred")
+                    let t = en || Q;
+                    B.A.error((null == t ? void 0 : null === (e = t.message) || void 0 === e ? void 0 : e.split("\n")[0]) || "An error occurred")
                 }
             }
-            , [en, ea, Q, ee]);
-            let ed = async () => {
+            , [et, en, X, Q]);
+            let eu = async () => {
                 console.log("validateTwitter"),
                 W(!0);
                 try {
-                    let e = await el();
+                    let e = await eo();
                     console.log("res", e),
-                    e.success ? N(!0) : U.A.error("Please follow the Twitter account")
+                    e.success ? N(!0) : B.A.error("Please follow the Twitter account")
                 } catch (e) {
                     console.error("error", e)
                 } finally {
                     W(!1)
                 }
             }
-              , ep = async () => {
+              , ed = async () => {
                 console.log("validateMeme"),
                 Z(!0);
                 try {
-                    let e = await eu();
-                    e.data && e.data.length >= 0 ? H(!0) : U.A.error("Please Create & Share a meme")
+                    let e = await el();
+                    e.data && e.data.length >= 0 ? H(!0) : B.A.error("Please Create & Share a meme")
                 } catch (e) {
                     console.error("error", e)
                 } finally {
                     Z(!1)
                 }
             }
-              , ec = () => {
+              , ep = () => {
                 console.log("validateTelegram"),
-                G(!0)
+                D(!0)
+            }
+              , ec = e => {
+                console.log("validateEligibility", e),
+                "twitter" === e && eu(),
+                "meme" === e && ed(),
+                "telegram" === e && ep()
             }
               , ey = e => {
-                console.log("validateEligibility", e),
-                "twitter" === e && ed(),
-                "meme" === e && ep(),
-                "telegram" === e && ec()
-            }
-              , em = e => {
                 let {isCompleted: t, onValidate: n, onClick: r, button: i, title: s, step: o} = e;
                 return (0,
                 a.jsx)("div", {
@@ -1376,16 +1350,16 @@
                             a.jsxs)("div", {
                                 className: "flex flex-row items-center justify-start gap-5",
                                 children: [(0,
-                                a.jsx)(F.A, {
+                                a.jsx)(R.A, {
                                     color: "secondary",
                                     onClick: r,
                                     variant: "flat",
                                     radius: "md",
                                     children: i
                                 }), l && (0,
-                                a.jsx)(F.A, {
+                                a.jsx)(R.A, {
                                     onClick: n,
-                                    isLoading: J || Y,
+                                    isLoading: J || G,
                                     color: "secondary",
                                     variant: "flat",
                                     radius: "md",
@@ -1396,8 +1370,7 @@
                     })
                 })
             }
-              , ef = "2024-11-18T23:59:59"
-              , eh = () => (0,
+              , em = () => (0,
             a.jsxs)("div", {
                 className: "flex flex-col gap-5",
                 children: [(0,
@@ -1430,13 +1403,13 @@
                         }), (0,
                         a.jsxs)("p", {
                             children: ["Add Story Chain on metamask only add from here", " ", (0,
-                            a.jsx)(L.default, {
+                            a.jsx)(U.default, {
                                 href: "https://odyssey.storyscan.xyz/",
                                 className: "text-purple-500",
                                 target: "_blank",
                                 children: "StoryScan"
                             }), " ", "or", " ", (0,
-                            a.jsx)(L.default, {
+                            a.jsx)(U.default, {
                                 href: "https://faucet.story.foundation/",
                                 className: "text-purple-500",
                                 target: "_blank",
@@ -1457,12 +1430,12 @@
                     })]
                 })]
             })
-              , ex = j && D && $;
+              , ef = j && L && $;
             return (0,
             a.jsxs)("div", {
                 className: "flex flex-col",
                 children: [(0,
-                a.jsxs)(B.W2, {
+                a.jsxs)(z.W2, {
                     className: "overflow-y-hidden px-6 py-16",
                     children: [f && (0,
                     a.jsx)("div", {
@@ -1471,7 +1444,7 @@
                         a.jsx)("div", {
                             className: "relative h-56 w-56 rounded-lg border-[2px] border-transparent bg-white [background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#e1f06a,#b2c259)_border-box] before:absolute before:inset-0 before:rounded-lg before:bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] before:bg-[length:16px_16px] before:content-['']",
                             children: (0,
-                            a.jsx)(z.J, {
+                            a.jsx)(P.J, {
                                 className: "relative z-10 h-full w-full object-contain",
                                 src: "/assets/badges/posterdotfun-prologue-badge.png",
                                 alt: "badge"
@@ -1520,49 +1493,40 @@
                             a.jsxs)("div", {
                                 className: "flex flex-col gap-5",
                                 children: [!l && (0,
-                                a.jsx)(eh, {}), (0,
+                                a.jsx)(em, {}), (0,
                                 a.jsx)("div", {
                                     className: "h-[1px] w-full bg-gray-200"
                                 }), (0,
-                                a.jsxs)("div", {
+                                a.jsx)("div", {
                                     className: "flex flex-col gap-1",
-                                    children: [(0,
+                                    children: (0,
                                     a.jsx)("p", {
                                         className: "text-center text-gray-500 lg:text-left",
-                                        children: "Claim window ends"
-                                    }), (0,
-                                    a.jsx)("div", {
-                                        className: "text-center text-2xl font-bold lg:text-left",
-                                        children: (0,
-                                        a.jsx)(_, {
-                                            targetDate: new Date(ef)
-                                        })
-                                    })]
+                                        children: "Claim will be available soon"
+                                    })
                                 }), (0,
-                                a.jsx)(F.A, {
+                                a.jsx)(R.A, {
                                     onClick: () => {
-                                        y !== O.A.id ? d({
-                                            chainId: O.A.id
-                                        }) : X ? U.A.error("You have already claimed the badge") : ex ? ei() : U.A.error("You are not eligible to claim this badge")
+                                        B.A.error("Claim will be available soon")
                                     }
                                     ,
                                     disabled: !n,
-                                    isLoading: eo,
+                                    isLoading: es,
                                     color: "secondary",
                                     variant: "flat",
                                     radius: "md",
                                     size: "lg",
-                                    children: y != O.A.id ? "Switch Netwok" : X ? "Already Claimed" : ex ? "Claim Badge" : "Check Eligibility"
+                                    children: y != E.A.id ? "Switch Netwok" : K ? "Already Claimed" : ef ? "Claim Badge" : "Check Eligibility"
                                 }), !n && (0,
                                 a.jsx)("p", {
                                     className: "text-medium font-semibold text-red-500",
                                     children: "Please login to claim the Badge"
-                                }), X && (0,
+                                }), K && (0,
                                 a.jsx)("div", {
                                     className: "mt-2 text-sm text-green-500",
                                     children: (0,
                                     a.jsxs)("a", {
-                                        href: (null === O.A || void 0 === O.A ? void 0 : null === (e = O.A.blockExplorers) || void 0 === e ? void 0 : e.default.url) + "/tx/" + (null == et ? void 0 : et.transactionHash),
+                                        href: (null === E.A || void 0 === E.A ? void 0 : null === (e = E.A.blockExplorers) || void 0 === e ? void 0 : e.default.url) + "/tx/" + (null == ee ? void 0 : ee.transactionHash),
                                         rel: "noreferrer",
                                         target: "_blank",
                                         children: [" ", "View tx"]
@@ -1577,13 +1541,13 @@
                             a.jsx)("div", {
                                 className: "flex w-full flex-col gap-5",
                                 children: C.map(e => (0,
-                                a.jsx)(em, {
-                                    isCompleted: "twitter" === e.social ? j : "meme" === e.social ? D : $,
+                                a.jsx)(ey, {
+                                    isCompleted: "twitter" === e.social ? j : "meme" === e.social ? L : $,
                                     onClick: () => {
                                         window.open(e.url, "_blank")
                                     }
                                     ,
-                                    onValidate: () => ey(e.social),
+                                    onValidate: () => ec(e.social),
                                     button: e.button,
                                     title: e.title,
                                     step: e.step
@@ -1594,7 +1558,7 @@
                                 a.jsx)("div", {
                                     className: "relative h-96 w-96 rounded-lg border-[2px] border-transparent bg-white [background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#e1f06a,#b2c259)_border-box] before:absolute before:inset-0 before:rounded-lg before:bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] before:bg-[length:16px_16px] before:content-['']",
                                     children: (0,
-                                    a.jsx)(z.J, {
+                                    a.jsx)(P.J, {
                                         className: "relative z-10 h-full w-full object-contain",
                                         src: "/assets/badges/posterdotfun-prologue-badge.png",
                                         alt: "badge"
@@ -1608,45 +1572,36 @@
                             a.jsxs)("div", {
                                 className: "flex flex-col gap-5",
                                 children: [(0,
-                                a.jsxs)("div", {
+                                a.jsx)("div", {
                                     className: "flex flex-col gap-1",
-                                    children: [(0,
+                                    children: (0,
                                     a.jsx)("p", {
                                         className: "text-gray-500",
-                                        children: "Claim window ends"
-                                    }), (0,
-                                    a.jsx)("div", {
-                                        className: "text-2xl font-bold",
-                                        children: (0,
-                                        a.jsx)(_, {
-                                            targetDate: new Date(ef)
-                                        })
-                                    })]
+                                        children: "Claim will be available soon"
+                                    })
                                 }), (0,
-                                a.jsx)(F.A, {
+                                a.jsx)(R.A, {
                                     onClick: () => {
-                                        y !== O.A.id ? d({
-                                            chainId: O.A.id
-                                        }) : X ? U.A.error("You have already claimed the badge") : ex ? ei() : U.A.error("You are not eligible to claim this badge")
+                                        B.A.error("Claim will be available soon")
                                     }
                                     ,
                                     disabled: !n,
-                                    isLoading: eo,
+                                    isLoading: es,
                                     color: "secondary",
                                     variant: "flat",
                                     radius: "md",
                                     size: "lg",
-                                    children: y != O.A.id ? "Switch Netwok" : X ? "Already Claimed" : ex ? "Claim Badge" : "Check Eligibility"
+                                    children: y != E.A.id ? "Switch Netwok" : K ? "Already Claimed" : ef ? "Claim Badge" : "Check Eligibility"
                                 }), !n && (0,
                                 a.jsx)("p", {
                                     className: "text-medium font-semibold text-red-500",
                                     children: "Please login to claim the Badge"
-                                }), X && (0,
+                                }), K && (0,
                                 a.jsx)("div", {
                                     className: "mt-2 text-sm text-green-500",
                                     children: (0,
                                     a.jsxs)("a", {
-                                        href: (null === O.A || void 0 === O.A ? void 0 : null === (t = O.A.blockExplorers) || void 0 === t ? void 0 : t.default.url) + "/tx/" + (null == et ? void 0 : et.transactionHash),
+                                        href: (null === E.A || void 0 === E.A ? void 0 : null === (t = E.A.blockExplorers) || void 0 === t ? void 0 : t.default.url) + "/tx/" + (null == ee ? void 0 : ee.transactionHash),
                                         rel: "noreferrer",
                                         target: "_blank",
                                         children: [" ", "View tx"]
@@ -1655,14 +1610,14 @@
                                 a.jsx)("div", {
                                     className: "h-[1px] w-full bg-gray-200"
                                 }), !l && !f && (0,
-                                a.jsx)(eh, {}), l && !f && (0,
+                                a.jsx)(em, {}), l && !f && (0,
                                 a.jsx)("div", {
                                     className: "flex items-center justify-center",
                                     children: (0,
                                     a.jsx)("div", {
                                         className: "relative h-96 w-96 rounded-lg border-[2px] border-transparent bg-white [background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#e1f06a,#b2c259)_border-box] before:absolute before:inset-0 before:rounded-lg before:bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] before:bg-[length:16px_16px] before:content-['']",
                                         children: (0,
-                                        a.jsx)(z.J, {
+                                        a.jsx)(P.J, {
                                             className: "relative z-10 h-full w-full object-contain",
                                             src: "/assets/badges/posterdotfun-prologue-badge.png",
                                             alt: "badge"
@@ -1677,8 +1632,8 @@
                     var e;
                     return (0,
                     a.jsx)(i.R, {
-                        onClose: () => q(!1),
-                        isOpen: V,
+                        onClose: () => V(!1),
+                        isOpen: Y,
                         size: "2xl",
                         children: (0,
                         a.jsxs)(s.A, {
@@ -1691,7 +1646,7 @@
                                     a.jsx)("div", {
                                         className: "relative h-64 w-64 rounded-lg border-[2px] border-transparent bg-white [background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#e1f06a,#b2c259)_border-box] before:absolute before:inset-0 before:rounded-lg before:bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] before:bg-[length:16px_16px] before:content-['']",
                                         children: (0,
-                                        a.jsx)(z.J, {
+                                        a.jsx)(P.J, {
                                             className: "relative z-10 h-full w-full object-contain",
                                             src: "/assets/badges/posterdotfun-prologue-badge.png",
                                             alt: "badge"
@@ -1710,7 +1665,7 @@
                                         children: "You have successfully claimed your Badge!"
                                     }), (0,
                                     a.jsx)("a", {
-                                        href: "".concat(null === O.A || void 0 === O.A ? void 0 : null === (e = O.A.blockExplorers) || void 0 === e ? void 0 : e.default.url, "/tx/").concat(null == et ? void 0 : et.transactionHash),
+                                        href: "".concat(null === E.A || void 0 === E.A ? void 0 : null === (e = E.A.blockExplorers) || void 0 === e ? void 0 : e.default.url, "/tx/").concat(null == ee ? void 0 : ee.transactionHash),
                                         className: "text-purple-500 hover:underline",
                                         rel: "noreferrer",
                                         target: "_blank",
@@ -1720,8 +1675,8 @@
                             }), (0,
                             a.jsx)(c, {
                                 children: (0,
-                                a.jsx)(F.A, {
-                                    onPress: () => q(!1),
+                                a.jsx)(R.A, {
+                                    onPress: () => V(!1),
                                     color: "secondary",
                                     variant: "flat",
                                     children: "Close"
@@ -1848,7 +1803,7 @@
             s.G)(e)
               , {writeContract: u, isError: d, isPending: p, error: c, data: y} = (0,
             o.S)()
-              , {isLoading: m, isSuccess: f, isError: h, error: x, data: b} = (0,
+              , {isLoading: m, isSuccess: f, isError: b, error: h, data: x} = (0,
             l.A)({
                 hash: y
             });
@@ -1872,9 +1827,9 @@
                 tx: {
                     isTxConfirming: m,
                     isTxSuccess: f,
-                    isTxError: h,
-                    txError: x,
-                    txData: b
+                    isTxError: b,
+                    txError: h,
+                    txData: x
                 }
             }
         }
