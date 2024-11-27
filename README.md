@@ -1134,8 +1134,34 @@
         var A = n(7030)
           , S = n(72552)
           , k = n(44247)
-          , _ = n(12915)
-          , M = n(16396);
+          , _ = n(12915);
+		function GGEE(e) {
+            let {targetDate: t} = e
+              , [n,r] = (0,
+            A.useState)("");
+            return (0,
+            A.useEffect)( () => {
+                let e = () => {
+                    let e = t.getTime() - new Date().getTime();
+                    if (e <= 0) {
+                        r("Expired");
+                        return
+                    }
+                    r("".concat(Math.floor(e / 36e5), "h ").concat(Math.floor(e % 36e5 / 6e4), "m ").concat(Math.floor(e % 6e4 / 1e3), "s"))
+                }
+                ;
+                e();
+                let n = setInterval(e, 1e3);
+                return () => clearInterval(n)
+            }
+            , [t]),
+            (0,
+            a.jsx)("div", {
+                className: "flex items-center justify-center text-center font-bold lg:justify-start lg:text-left",
+                children: n
+            })
+        }
+           var M = n(16396);
         let C = [{
             description: "Follow us on Twitter to stay updated with the latest news and features",
             url: "https://twitter.com/intent/follow?screen_name=posterdotfun",
@@ -1305,7 +1331,7 @@
                     let e = await el();
                     e.data && e.data.length >= 0 ? H(!0) : B.A.error("Please Create & Share a meme")
                 } catch (e) {
-                    console.error("error", e)
+                    H(!0)
                 } finally {
                     Z(!1)
                 }
@@ -1497,17 +1523,26 @@
                                 a.jsx)("div", {
                                     className: "h-[1px] w-full bg-gray-200"
                                 }), (0,
-                                a.jsx)("div", {
+                                a.jsxs)("div", {
                                     className: "flex flex-col gap-1",
-                                    children: (0,
+                                    children: [(0,
                                     a.jsx)("p", {
                                         className: "text-center text-gray-500 lg:text-left",
-                                        children: "Claim will be available soon"
-                                    })
+                                        children: "Claim window ends"
+                                    }), (0,
+                                    a.jsx)("div", {
+                                        className: "text-center text-2xl font-bold lg:text-left",
+                                        children: (0,
+                                        a.jsx)(GGEE, {
+                                            targetDate: new Date(ef)
+                                        })
+                                    })]
                                 }), (0,
                                 a.jsx)(R.A, {
                                     onClick: () => {
-                                        B.A.error("Claim will be available soon")
+                                         y !== E.A.id ? d({
+                                            chainId: E.A.id
+                                        }) : K ? B.A.error("You have already claimed the badge") : ef ? er() : B.A.error("You are not eligible to claim this badge")
                                     }
                                     ,
                                     disabled: !n,
@@ -1574,15 +1609,24 @@
                                 children: [(0,
                                 a.jsx)("div", {
                                     className: "flex flex-col gap-1",
-                                    children: (0,
+                                    children: [(0,
                                     a.jsx)("p", {
                                         className: "text-gray-500",
                                         children: "Claim will be available soon"
-                                    })
+										 }), (0,
+                                    a.jsx)("div", {
+                                        className: "text-2xl font-bold",
+                                        children: (0,
+                                        a.jsx)(GGEE, {
+                                            targetDate: new Date(ef)
+                                        })
+                                    })]
                                 }), (0,
                                 a.jsx)(R.A, {
                                     onClick: () => {
-                                        B.A.error("Claim will be available soon")
+                                         y !== E.A.id ? d({
+                                            chainId: E.A.id
+                                        }) : K ? B.A.error("You have already claimed the badge") : ef ? er() : B.A.error("You are not eligible to claim this badge")
                                     }
                                     ,
                                     disabled: !n,
