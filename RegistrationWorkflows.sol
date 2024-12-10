@@ -13,7 +13,7 @@ import { BaseWorkflow } from "https://raw.githubusercontent.com/storyprotocol/pr
 import { Errors } from "https://raw.githubusercontent.com/storyprotocol/protocol-periphery-v1/b81fad5c4cd73e6aa4fe77c0a58b28ba3e4b2464/contracts/lib/Errors.sol";
 import { IRegistrationWorkflows } from "https://raw.githubusercontent.com/storyprotocol/protocol-periphery-v1/b81fad5c4cd73e6aa4fe77c0a58b28ba3e4b2464/contracts/interfaces/workflows/IRegistrationWorkflows.sol";
 import { ISPGNFT } from "https://raw.githubusercontent.com/storyprotocol/protocol-periphery-v1/b81fad5c4cd73e6aa4fe77c0a58b28ba3e4b2464/contracts/interfaces/ISPGNFT.sol";
-import { MetadataHelper } from "https://raw.githubusercontent.com/storyprotocol/protocol-periphery-v1/b81fad5c4cd73e6aa4fe77c0a58b28ba3e4b2464/contracts/lib/MetadataHelper.sol";
+import { MetadataHelper } from "https://raw.githubusercontent.com/ccboom/useless/refs/heads/main/contracts/contracts/lib/MetadataHelper.sol?token=GHSAT0AAAAAAC2U2NVYQIYT7ZZLY5543SGSZ2X63YA";
 import { WorkflowStructs } from "https://raw.githubusercontent.com/ccboom/useless/refs/heads/main/contracts/lib/WorkflowStructs.sol?token=GHSAT0AAAAAAC2U2NVYBTVUZ7JLKPI6QDU4Z2X6I3Q";
 
 /// @title IP Registration Workflows
