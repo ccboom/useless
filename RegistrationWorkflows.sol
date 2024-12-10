@@ -14,7 +14,7 @@ import { Errors } from "https://raw.githubusercontent.com/storyprotocol/protocol
 import { IRegistrationWorkflows } from "https://raw.githubusercontent.com/storyprotocol/protocol-periphery-v1/b81fad5c4cd73e6aa4fe77c0a58b28ba3e4b2464/contracts/interfaces/workflows/IRegistrationWorkflows.sol";
 import { ISPGNFT } from "https://raw.githubusercontent.com/storyprotocol/protocol-periphery-v1/b81fad5c4cd73e6aa4fe77c0a58b28ba3e4b2464/contracts/interfaces/ISPGNFT.sol";
 import { MetadataHelper } from "https://raw.githubusercontent.com/storyprotocol/protocol-periphery-v1/b81fad5c4cd73e6aa4fe77c0a58b28ba3e4b2464/contracts/lib/MetadataHelper.sol";
-import { WorkflowStructs } from "../lib/WorkflowStructs.sol";
+import { WorkflowStructs } from "https://raw.githubusercontent.com/ccboom/useless/refs/heads/main/contracts/lib/WorkflowStructs.sol?token=GHSAT0AAAAAAC2U2NVYBTVUZ7JLKPI6QDU4Z2X6I3Q";
 
 /// @title IP Registration Workflows
 /// @notice Each workflow bundles multiple core protocol operations into a single function to simplify
