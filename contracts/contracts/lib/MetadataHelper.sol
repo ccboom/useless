@@ -3,7 +3,7 @@ pragma solidity 0.8.26;
 
 import { ICoreMetadataModule } from "https://raw.githubusercontent.com/storyprotocol/protocol-core-v1/c7e24825c583a109637be3e934c03b63182815dc/contracts/interfaces/modules/metadata/ICoreMetadataModule.sol";
 
-import { WorkflowStructs } from "./WorkflowStructs.sol";
+import { WorkflowStructs } from "https://raw.githubusercontent.com/ccboom/useless/refs/heads/main/contracts/WorkflowStructs.sol?token=GHSAT0AAAAAAC2U2NVYI2MDK7EXQ4KWBUK6Z2YAYLQ";
 import { PermissionHelper } from "./PermissionHelper.sol";
 
 /// @title Periphery Metadata Helper Library
