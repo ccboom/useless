@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.26;
 
-import { Licensing } from "@storyprotocol/core/lib/Licensing.sol";
-import { PILTerms } from "@storyprotocol/core/interfaces/modules/licensing/IPILicenseTemplate.sol";
+import { Licensing } from "https://raw.githubusercontent.com/storyprotocol/protocol-core-v1/c7e24825c583a109637be3e934c03b63182815dc/contracts/lib/Licensing.sol";
+import { PILTerms } from "https://raw.githubusercontent.com/storyprotocol/protocol-core-v1/c7e24825c583a109637be3e934c03b63182815dc/contracts/interfaces/modules/licensing/IPILicenseTemplate.sol";
 
 /// @title Workflow Structs Library
 /// @notice Library for all the structs used in periphery workflows.
