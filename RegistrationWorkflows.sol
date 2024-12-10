@@ -72,33 +72,26 @@ contract RegistrationWorkflows is
     /// @dev Initializes the contract.
     /// @param accessManager The address of the protocol access manager.
     function initialize(address accessManager) external initializer {
-        if (accessManager == address(0)) revert Errors.RegistrationWorkflows__ZeroAddressParam();
-        __AccessManaged_init(accessManager);
-        __UUPSUpgradeable_init();
+       
     }
 
     /// @dev Sets the NFT contract beacon address.
     /// @param newNftContractBeacon The address of the new NFT contract beacon.
     function setNftContractBeacon(address newNftContractBeacon) external restricted {
-        if (newNftContractBeacon == address(0)) revert Errors.RegistrationWorkflows__ZeroAddressParam();
-        RegistrationWorkflowsStorage storage $ = _getRegistrationWorkflowsStorage();
-        $.nftContractBeacon = newNftContractBeacon;
+        
     }
 
     /// @dev Upgrades the NFT contract beacon. Restricted to only the protocol access manager.
     /// @param newNftContract The address of the new NFT contract implemenetation.
     function upgradeCollections(address newNftContract) public restricted {
-        // UpgradeableBeacon checks for newImplementation.bytecode.length > 0, so no need to check for zero address.
-        UpgradeableBeacon(_getRegistrationWorkflowsStorage().nftContractBeacon).upgradeTo(newNftContract);
+        
     }
 
     /// @notice Creates a new SPGNFT collection to be used by SPG.
     /// @param spgNftInitParams The initialization parameters for the SPGNFT collection. See {ISPGNFT-InitParams}.
     /// @return spgNftContract The address of the newly created SPGNFT collection.
     function createCollection(ISPGNFT.InitParams calldata spgNftInitParams) external returns (address spgNftContract) {
-        spgNftContract = address(new BeaconProxy(_getRegistrationWorkflowsStorage().nftContractBeacon, ""));
-        ISPGNFT(spgNftContract).initialize(spgNftInitParams);
-        emit CollectionCreated(spgNftContract);
+        
     }
 
     /// @notice Mint an NFT from a SPGNFT collection and register it with metadata as an IP.
@@ -115,17 +108,7 @@ contract RegistrationWorkflows is
         WorkflowStructs.IPMetadata calldata ipMetadata,
         bool allowDuplicates
     ) external onlyMintAuthorized(spgNftContract) returns (address ipId, uint256 tokenId) {
-        tokenId = ISPGNFT(spgNftContract).mintByPeriphery({
-            to: address(this),
-            payer: msg.sender,
-            nftMetadataURI: ipMetadata.nftMetadataURI,
-            nftMetadataHash: ipMetadata.nftMetadataHash,
-            allowDuplicates: allowDuplicates
-        });
 
-        ipId = IP_ASSET_REGISTRY.register(block.chainid, spgNftContract, tokenId);
-        MetadataHelper.setMetadata(ipId, address(CORE_METADATA_MODULE), ipMetadata);
-        ISPGNFT(spgNftContract).safeTransferFrom(address(this), recipient, tokenId, "");
     }
 
     /// @notice Registers an NFT as IP with metadata.
@@ -140,14 +123,7 @@ contract RegistrationWorkflows is
         WorkflowStructs.IPMetadata calldata ipMetadata,
         WorkflowStructs.SignatureData calldata sigMetadata
     ) external returns (address ipId) {
-        ipId = IP_ASSET_REGISTRY.register(block.chainid, nftContract, tokenId);
-        MetadataHelper.setMetadataWithSig(
-            ipId,
-            address(CORE_METADATA_MODULE),
-            address(ACCESS_CONTROLLER),
-            ipMetadata,
-            sigMetadata
-        );
+       
     }
 
     //
