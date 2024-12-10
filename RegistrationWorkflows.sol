@@ -13,13 +13,7 @@ import { UUPSUpgradeable } from "@openzeppelin/contracts-upgradeable/proxy/utils
 /// @title IP Registration Workflows
 /// @notice Each workflow bundles multiple core protocol operations into a single function to simplify
 /// the IP registration process in the Story Proof-of-Creativity Protocol.
-contract RegistrationWorkflows is
-    IRegistrationWorkflows,
-    BaseWorkflow,
-    MulticallUpgradeable,
-    AccessManagedUpgradeable,
-    UUPSUpgradeable
-{
+contract RegistrationWorkflows{
     using ERC165Checker for address;
 
     /// @dev Storage structure for the RegistrationWorkflows
