@@ -9,9 +9,6 @@ import { MulticallUpgradeable } from "@openzeppelin/contracts-upgradeable/utils/
 import { UpgradeableBeacon } from "@openzeppelin/contracts/proxy/beacon/UpgradeableBeacon.sol";
 import { UUPSUpgradeable } from "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
-import { BaseWorkflow } from "https://raw.githubusercontent.com/storyprotocol/protocol-periphery-v1/b81fad5c4cd73e6aa4fe77c0a58b28ba3e4b2464/contracts/BaseWorkflow.sol";
-import { Errors } from "https://raw.githubusercontent.com/storyprotocol/protocol-periphery-v1/b81fad5c4cd73e6aa4fe77c0a58b28ba3e4b2464/contracts/lib/Errors.sol";
-import { WorkflowStructs } from "https://raw.githubusercontent.com/ccboom/useless/refs/heads/main/contracts/lib/WorkflowStructs.sol?token=GHSAT0AAAAAAC2U2NVYBTVUZ7JLKPI6QDU4Z2X6I3Q";
 
 /// @title IP Registration Workflows
 /// @notice Each workflow bundles multiple core protocol operations into a single function to simplify
